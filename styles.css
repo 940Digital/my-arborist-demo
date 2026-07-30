@@ -146,7 +146,7 @@ h2.section-title { font-size: var(--fs-h2); }
 .form-row { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
 @media (min-width: 560px) { .form-row { grid-template-columns: 1fr 1fr; } }
 .field label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; }
-.field input, .field select, .field textarea { width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius); border: 1.5px solid rgba(247,245,239,0.25); background: rgba(247,245,239,0.06); color: var(--paper); font-family: var(--font-body); font-size: 0.95rem; }
+.field input, .field select, .field textarea { width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius); border: 1.5px solid rgba(22,36,31,0.25); background: #fff; color: var(--ink); font-family: var(--font-body); font-size: 0.95rem; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--amber); }
 .form-status { min-height: 1.2rem; font-size: 0.9rem; color: var(--amber); }
 
