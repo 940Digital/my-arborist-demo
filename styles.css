@@ -1,0 +1,164 @@
+:root {
+  --pine: #1B2E27;
+  --paper: #F7F5EF;
+  --ink: #16241F;
+  --amber: #C77D2E;
+  --field: #4F7A5C;
+  --slate: #8A928C;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --fs-h2: clamp(1.9rem, 4vw, 3rem);
+  --radius: 3px;
+  --wrap: 1220px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 2rem; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.05; margin: 0; color: var(--pine); }
+h2.section-title { font-size: var(--fs-h2); }
+.section--dark h1, .section--dark h2 { color: var(--paper); }
+
+.eyebrow { display: block; font-family: var(--font-mono); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; }
+
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 1.9rem; border-radius: var(--radius); font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; border: 1.5px solid transparent; cursor: pointer; transition: transform .18s ease, background .18s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--pine); color: var(--paper); }
+.btn--primary:hover { background: #10201a; }
+.btn--ghost { border-color: var(--pine); color: var(--pine); }
+.btn--ghost:hover { border-color: var(--amber); color: var(--amber); }
+.btn--dark-ghost { border-color: var(--paper); color: var(--paper); }
+
+/* ---------- The Credential Stack — signature element ----------
+   Replaces the story-pole. Salvador holds three real ISA
+   certifications (Certified Arborist, Utility Specialist, Urban
+   Forest Professional) — this is his actual differentiator from
+   unlicensed competitors, so the wayfinding device is three circular
+   seals, fixed on the left edge, that stamp solid one at a time as
+   you scroll through the page, instead of a generic progress rail. */
+.cred-stack { position: fixed; left: 20px; top: 50%; transform: translateY(-50%); z-index: 60; display: none; flex-direction: column; gap: 1.1rem; }
+@media (min-width: 1080px) { .cred-stack { display: flex; } }
+.cred-stack__seal {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid var(--slate); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 0.6rem; font-weight: 700; color: var(--slate);
+  transition: border-color .3s ease, color .3s ease, background .3s ease;
+}
+.cred-stack__seal.stamped { border-color: var(--amber); background: var(--amber); color: #fff; }
+
+/* ---------- Header ---------- */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 1.2rem 0; transition: background .2s ease, padding .2s ease, box-shadow .2s ease; }
+.site-header .wrap { display: flex; align-items: center; gap: 1.5rem; }
+.site-header.solid { background: var(--paper); padding: 0.75rem 0; box-shadow: 0 2px 18px rgba(22,36,31,0.1); }
+.logo { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; margin-right: auto; }
+.logo span { color: var(--amber); }
+.preview-flag { font-size: 0.78rem; font-weight: 700; padding: 0.4rem 0.9rem; border-radius: 999px; border: 1px solid var(--slate); color: var(--slate); white-space: nowrap; }
+.preview-flag:hover { border-color: var(--amber); color: var(--amber); }
+.main-nav { display: none; gap: 1.8rem; font-weight: 600; font-size: 0.9rem; }
+.main-nav a:hover { color: var(--amber); }
+@media (min-width: 900px) { .main-nav { display: flex; } }
+.nav-toggle { background: none; border: 1.5px solid var(--pine); border-radius: var(--radius); padding: 0.5rem 0.9rem; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
+@media (min-width: 900px) { .nav-toggle { display: none; } }
+.mobile-nav { position: fixed; inset: 0; z-index: 70; background: var(--pine); color: var(--paper); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1.6rem; padding: 2rem 2.5rem; transform: translateX(100%); transition: transform .3s ease; }
+.mobile-nav.open { transform: translateX(0); }
+.mobile-nav a { font-family: var(--font-display); font-size: 1.9rem; }
+.mobile-nav__close { position: absolute; top: 1.5rem; right: 1.8rem; background: none; border: none; color: var(--paper); font-weight: 700; cursor: pointer; }
+
+/* ---------- Hero ---------- */
+.hero { padding: 10rem 0 5rem; }
+.hero .wrap { display: grid; gap: 3rem; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 980px) { .hero .wrap { grid-template-columns: 1.1fr 0.9fr; } }
+.hero h1 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); max-width: 13ch; }
+.hero__dek { max-width: 44ch; margin: 1.4rem 0 2rem; font-size: 1.1rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.hero__media img { border-radius: var(--radius); box-shadow: 0 30px 60px -20px rgba(22,36,31,0.4); }
+
+/* ---------- Section shell ---------- */
+.section { padding: 5.5rem 0; }
+.section--dark { background: var(--pine); color: var(--paper); }
+.section--dark .eyebrow { color: var(--field); }
+.section-head { max-width: 62ch; margin-bottom: 3rem; }
+.section-dek { margin-top: 1rem; opacity: 0.88; font-size: 1.05rem; }
+
+/* ---------- Credentials spec sheet — lead section ---------- */
+.spec-sheet { border: 1.5px solid rgba(27,46,39,0.2); border-radius: var(--radius); overflow: hidden; margin-top: 1rem; }
+.spec-row { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; padding: 1.1rem 1.5rem; border-bottom: 1px solid rgba(27,46,39,0.12); background: rgba(27,46,39,0.02); }
+.spec-row:last-child { border-bottom: none; }
+.spec-row dt { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--amber); text-transform: uppercase; letter-spacing: 0.04em; }
+.spec-row dd { margin: 0; font-weight: 600; }
+.spec-row dd small { display: block; font-family: var(--font-mono); font-weight: 400; color: var(--slate); font-size: 0.82rem; margin-top: 0.2rem; }
+
+/* ---------- Services — technical two-column list ---------- */
+.tech-list { margin-top: 1rem; display: grid; gap: 1px; background: rgba(247,245,239,0.1); border-radius: var(--radius); overflow: hidden; }
+.tech-row { background: var(--pine); padding: 1.3rem 1.6rem; display: grid; grid-template-columns: 8rem 1fr; gap: 1.2rem; align-items: baseline; }
+.tech-row span.tag { font-family: var(--font-mono); font-size: 0.75rem; color: var(--field); text-transform: uppercase; }
+.tech-row h3 { font-family: var(--font-body); font-weight: 700; text-transform: none; font-size: 1.05rem; margin-bottom: 0.2rem; }
+.tech-row p { margin: 0; opacity: 0.85; font-size: 0.92rem; }
+
+/* ---------- Reviews ---------- */
+.review-stat { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.review-stat b { font-family: var(--font-display); font-size: 3.2rem; color: var(--amber); }
+.review-consensus { max-width: 62ch; font-size: 1.08rem; }
+
+/* ---------- About ---------- */
+.about-layout { display: grid; gap: 2.5rem; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 980px) { .about-layout { grid-template-columns: 0.85fr 1.15fr; } }
+.about-media img { border-radius: var(--radius); }
+.about-copy p { max-width: 56ch; margin: 1.1rem 0; }
+
+/* ---------- Process ---------- */
+.process-grid { display: grid; gap: 1.4rem; grid-template-columns: 1fr; margin-top: 1rem; }
+@media (min-width: 780px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+.process-step { background: rgba(27,46,39,0.03); padding: 1.8rem 1.4rem; border-radius: var(--radius); border: 1px solid rgba(27,46,39,0.1); }
+.process-step b { display: block; font-family: var(--font-mono); font-size: 1.3rem; color: var(--amber); margin-bottom: 0.5rem; }
+
+/* ---------- Area ---------- */
+.area-list { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
+.area-list li { padding: 0.5rem 1.1rem; border: 1px solid var(--pine); border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+
+/* ---------- Contact ---------- */
+.contact-layout { display: grid; gap: 2.5rem; grid-template-columns: 1fr; margin-top: 1rem; }
+@media (min-width: 900px) { .contact-layout { grid-template-columns: 0.8fr 1.2fr; } }
+.contact-direct div { margin-bottom: 1.6rem; }
+.contact-direct__label { display: block; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--field); margin-bottom: 0.3rem; }
+.contact-direct a { font-family: var(--font-display); font-size: 1.4rem; }
+.contact-form { display: grid; gap: 1.1rem; }
+.form-row { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .form-row { grid-template-columns: 1fr 1fr; } }
+.field label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; }
+.field input, .field select, .field textarea { width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius); border: 1.5px solid rgba(247,245,239,0.25); background: rgba(247,245,239,0.06); color: var(--paper); font-family: var(--font-body); font-size: 0.95rem; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--amber); }
+.form-status { min-height: 1.2rem; font-size: 0.9rem; color: var(--amber); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink); color: var(--paper); padding: 2.6rem 0; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.2rem; }
+.footer-fine { width: 100%; font-size: 0.8rem; opacity: 0.6; margin-top: 1rem; }
+.footer-links { display: flex; gap: 1.4rem; font-size: 0.85rem; }
+
+/* ---------- Buy-this-site page ---------- */
+.pitch-hero { padding: 9.5rem 0 4rem; text-align: center; }
+.pitch-hero p { max-width: 56ch; margin: 1.3rem auto 0; font-size: 1.1rem; }
+.pitch-grid { display: grid; gap: 1.4rem; grid-template-columns: 1fr; margin-top: 1rem; }
+@media (min-width: 780px) { .pitch-grid { grid-template-columns: repeat(3, 1fr); } }
+.pitch-card { background: rgba(27,46,39,0.03); border: 1px solid rgba(27,46,39,0.12); border-radius: var(--radius); padding: 2rem 1.6rem; }
+.pitch-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+.price-block { margin-top: 1rem; padding: 2.4rem; border: 2px dashed var(--slate); border-radius: var(--radius); text-align: center; }
+.price-block b { display: block; font-family: var(--font-display); font-size: 1.6rem; }
+.price-block span { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: var(--slate); }
