@@ -57,10 +57,12 @@ h2.section-title { font-size: var(--fs-h2); }
 .cred-stack__seal {
   width: 30px; height: 30px; border-radius: 50%;
   border: 2px solid var(--slate); display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-mono); font-size: 0.6rem; font-weight: 700; color: var(--slate);
+  color: var(--slate);
   transition: border-color .3s ease, color .3s ease, background .3s ease;
 }
+.cred-stack__seal svg { opacity: 0; transition: opacity .3s ease; }
 .cred-stack__seal.stamped { border-color: var(--amber); background: var(--amber); color: #fff; }
+.cred-stack__seal.stamped svg { opacity: 1; }
 
 /* ---------- Header ---------- */
 .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 1.2rem 0; transition: background .2s ease, padding .2s ease, box-shadow .2s ease; }
@@ -163,7 +165,7 @@ h2.section-title { font-size: var(--fs-h2); }
 .brand-mark span { color: #3194E0; }
 
 /* ---------- Buy-this-site page ---------- */
-.pitch-hero { padding: 9.5rem 0 4rem; text-align: center; }
+.pitch-hero { padding-top: 9.5rem; padding-bottom: 4rem; text-align: center; }
 .pitch-hero p { max-width: 56ch; margin: 1.3rem auto 0; font-size: 1.1rem; }
 .pitch-grid { display: grid; gap: 1.4rem; grid-template-columns: 1fr; margin-top: 1rem; }
 @media (min-width: 780px) { .pitch-grid { grid-template-columns: repeat(3, 1fr); } }
