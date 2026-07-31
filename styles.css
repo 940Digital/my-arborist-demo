@@ -75,13 +75,17 @@ h2.section-title { font-size: var(--fs-h2); }
 .preview-flag:hover { border-color: var(--amber); color: var(--amber); }
 .main-nav { display: none; gap: 1.8rem; font-weight: 600; font-size: 0.9rem; }
 .main-nav a:hover { color: var(--amber); }
-.nav-full-site { display: none; }
+.nav-full-site { display: inline-flex; }
 @media (min-width: 900px) {
   .main-nav { display: flex; }
   .nav-full-site { display: inline-flex; }
 }
 .nav-toggle { background: none; border: 1.5px solid var(--pine); border-radius: var(--radius); padding: 0.5rem 0.9rem; font-weight: 700; font-size: 0.85rem; cursor: pointer; }
 @media (min-width: 900px) { .nav-toggle { display: none; } }
+/* On mobile, the full-site CTA replaces the hamburger entirely (only
+   on pages that have one — buy.html has no nav-full-site sibling, so
+   its own Menu button is untouched). */
+.nav-cta:has(.nav-full-site) .nav-toggle { display: none; }
 .mobile-nav { position: fixed; inset: 0; z-index: 70; background: var(--pine); color: var(--paper); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1.6rem; padding: 2rem 2.5rem; transform: translateX(100%); transition: transform .3s ease; }
 .mobile-nav.open { transform: translateX(0); }
 .mobile-nav a { font-family: var(--font-display); font-size: 1.9rem; }
