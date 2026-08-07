@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>This Site Is a Preview, Built for My Arborist! — 940Digital</title>
-<meta name="description" content="This is a demo site built specifically for My Arborist! by 940Digital. Here's what it is, what you'd get, and how to move forward.">
+<title>Tree Planting — My Arborist! | Denton, TX</title>
+<meta name="description" content="Species selection matched to Denton soil and site conditions, planted by an ISA Certified Arborist with 10 years' experience.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,13 +16,19 @@
 </head>
 <body>
 
-<div class="brand-mark-banner">
-  <div class="wrap">
-    <a href="https://940digital.com" class="brand-mark" target="_blank" rel="noopener">940<span>Digital</span></a>
+<nav class="cred-stack" id="credStack">
+  <div class="cred-stack__seal" data-seal="1" title="ISA Certified Arborist">
+    <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 2L6 11h3l-4 6h5v4h4v-4h5l-4-6h3z"/></svg>
   </div>
-</div>
+  <div class="cred-stack__seal" data-seal="2" title="ISA Certified Arborist — Utility Specialist">
+    <svg viewBox="0 0 24 24" width="13" height="13"><path fill="currentColor" d="M13 2L4 14h6l-2 8 11-14h-7z"/></svg>
+  </div>
+  <div class="cred-stack__seal" data-seal="3" title="ISA Certified Urban Forest Professional">
+    <svg viewBox="0 0 24 24" width="16" height="14"><path fill="currentColor" d="M7 2L3 9h2.2L2 15h4v4h2v-4h4l-3.2-6H11z"/><path fill="currentColor" d="M17 5L13.5 11h1.8L12.5 16H16v3h2v-3h3.5l-2.8-5h1.8z"/></svg>
+  </div>
+</nav>
 
-<header class="site-header solid" style="position: static;">
+<header class="site-header" id="siteHeader">
   <div class="wrap">
     <a href="index.html" class="logo"><img src="logo-mark.png" alt="" class="logo-mark">My Arborist<span>!</span></a>
     <nav class="main-nav" aria-label="Primary">
@@ -30,9 +36,10 @@
       <a href="services.html">Services</a>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#about">About</a>
-      <a href="index.html">← Back to the Site Preview</a>
+      <a href="index.html#contact">Request a Consultation</a>
     </nav>
     <div class="nav-cta">
+      <a href="buy.html" class="btn btn--primary nav-full-site">Buy Full Site →</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav">Menu</button>
     </div>
   </div>
@@ -44,109 +51,98 @@
   <a href="services.html">Services</a>
   <a href="index.html#reviews">Reviews</a>
   <a href="index.html#about">About</a>
-  <a href="index.html">← Back to the Site Preview</a>
+  <a href="index.html#contact">Request a Consultation</a>
+  <a href="buy.html">Buy Full Site</a>
 </div>
 
 <main>
-  <section class="pitch-hero wrap" style="padding-top: 3rem;">
-    <h1>A website to fit the standard of your business.</h1>
-    <p>Three ISA certifications and 122 five-star reviews deserve a site that actually looks the part — professional enough to match the credentials, and engaging enough that a visitor books a consultation instead of scrolling past. We'll customize this exact site to your vision and have it fully live within a week or two, with zero extra work on your end.</p>
-  </section>
 
-  <section class="section" style="padding-top:0;">
+  <section class="hero" style="padding-top:9.5rem;">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">What You'd Actually Get</span>
-        <h2 class="section-title">Not just this page.</h2>
+      <div class="hero__content">
+        <span class="eyebrow"><a href="services.html" style="color:inherit;">Services</a> / Install</span>
+        <h1 style="font-size:clamp(2.2rem, 5vw, 3.6rem); max-width:15ch;">Tree Planting</h1>
+        <p class="hero__dek">Species selection matched to Denton's soil, sun exposure, and the site itself — planting a tree that will actually be sized and suited to fit its spot in twenty years, not just the day it goes in the ground.</p>
+        <div class="hero__actions">
+          <a href="index.html#contact" class="btn btn--primary">Request a Consultation</a>
+          <a href="tel:+12146209340" class="btn btn--ghost">Call (214) 620-9340</a>
+        </div>
       </div>
-      <div class="pitch-grid">
-        <div class="pitch-card">
-          <h3>A site built around you</h3>
-          <p>Colors, structure, and copy pulled from your real credentials and reviews — not a generic contractor template.</p>
-        </div>
-        <div class="pitch-card">
-          <h3>Real lead capture</h3>
-          <p>A working consultation-request form that emails and texts you directly.</p>
-        </div>
-        <div class="pitch-card">
-          <h3>Hosting, domain &amp; support</h3>
-          <p>940Digital handles hosting, your domain, and updates as your services change.</p>
-        </div>
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1709072142659-7f3c3284a504?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="An arborist measuring a tree trunk with a tape measure during a survey">
       </div>
     </div>
   </section>
 
-  <section class="section section--dark">
+  <section class="section" id="details" data-pole-label="Details">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Pricing</span>
-        <h2 class="section-title">Simple, transparent pricing.</h2>
-        <p class="section-dek">Three plans. Pick what fits, and grow into more later.</p>
+        <span class="eyebrow">What's Involved</span>
+        <h2 class="section-title">Planted to fit the site, not just today.</h2>
       </div>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Basic</h3>
-          <div class="pricing-card__price"><b>$20</b><span>/month</span></div>
-          <span class="pricing-card__setup">$200 one-time setup fee</span>
-          <ul class="pricing-card__list">
-            <li>4-page website</li>
-            <li>Custom design — no templates</li>
-            <li>Mobile responsive</li>
-            <li>Contact form</li>
-            <li>Photo gallery</li>
-            <li>On-page SEO basics</li>
-            <li>Hosting included</li>
-          </ul>
-          <a href="https://www.940digital.com/contact" class="btn btn--dark-ghost" target="_blank" rel="noopener">Get Started</a>
+      <dl class="spec-sheet">
+        <div class="spec-row">
+          <dt>Species selection</dt>
+          <dd>Matched to soil &amp; sun exposure<small>Chosen for the specific site, not a generic default</small></dd>
         </div>
-        <div class="pricing-card pricing-card--featured">
-          <span class="pricing-card__badge">Most Popular</span>
-          <h3>Plus</h3>
-          <div class="pricing-card__price"><b>$40</b><span>/month</span></div>
-          <span class="pricing-card__setup">$400 one-time setup fee</span>
-          <ul class="pricing-card__list">
-            <li>Up to 10 pages</li>
-            <li>Everything in Basic</li>
-            <li>Service-specific landing pages</li>
-            <li>Google Business Profile setup</li>
-            <li>Priority support</li>
-          </ul>
-          <a href="https://www.940digital.com/contact" class="btn btn--primary" target="_blank" rel="noopener">Get Started</a>
+        <div class="spec-row">
+          <dt>Placement</dt>
+          <dd>Sized for 20 years out<small>Accounts for mature canopy and root spread, not just current space</small></dd>
         </div>
-        <div class="pricing-card">
-          <h3>Pro</h3>
-          <div class="pricing-card__price"><b>$80</b><span>/month</span></div>
-          <span class="pricing-card__setup">$800 one-time setup fee</span>
-          <ul class="pricing-card__list">
-            <li>Up to 13 pages</li>
-            <li>Everything in Plus</li>
-            <li>Advanced SEO strategy and consulting</li>
-            <li>Analytics &amp; monthly reporting</li>
-            <li>Priority support &amp; maintenance</li>
-            <li>Dedicated account management</li>
-          </ul>
-          <a href="https://www.940digital.com/contact" class="btn btn--dark-ghost" target="_blank" rel="noopener">Get Started</a>
+        <div class="spec-row">
+          <dt>Standard</dt>
+          <dd>ISA-backed planting practice<small>10 years' experience, ISA Certified Arborist TX-3947AUM</small></dd>
         </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="process" data-pole-label="Process">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How It Works</span>
+        <h2 class="section-title">Four steps, assessed properly.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step"><b>01</b><h3 style="font-size:1.02rem;">Consultation</h3><p>Salvador assesses the tree(s) in person.</p></div>
+        <div class="process-step"><b>02</b><h3 style="font-size:1.02rem;">Written plan</h3><p>Species and placement recommendation for the site.</p></div>
+        <div class="process-step"><b>03</b><h3 style="font-size:1.02rem;">Scheduled work</h3><p>Done to ANSI A300 standard, insured.</p></div>
+        <div class="process-step"><b>04</b><h3 style="font-size:1.02rem;">Site cleanup</h3><p>Debris hauled, yard left clean.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="section" id="contact" data-pole-label="Contact">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Ready to Move Forward?</span>
-        <h2 class="section-title">Let's make it real.</h2>
-        <p class="section-dek">Text the number you got this link from, or reach out below.</p>
+        <h2 class="section-title">Get a real assessment, not a guess.</h2>
       </div>
-      <a href="https://www.940digital.com/contact.html" class="btn btn--primary" target="_blank" rel="noopener">Contact 940Digital</a>
+      <div class="contact-direct">
+        <div>
+          <span class="contact-direct__label">Call</span>
+          <a href="tel:+12146209340">(214) 620-9340</a>
+        </div>
+        <div>
+          <span class="contact-direct__label">Email</span>
+          <a href="mailto:sortiz@myarborist.net" style="font-size:1.05rem;">sortiz@myarborist.net</a>
+        </div>
+      </div>
+      <a href="index.html#contact" class="btn btn--primary" style="margin-top:1rem;">Request a Consultation</a>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
     <a href="index.html" class="logo">My Arborist<span>!</span></a>
-    <p class="footer-fine">&copy; 2026 940Digital. This preview was built for My Arborist! and is not affiliated with any other business.</p>
+    <ul class="footer-links">
+      <li><a href="index.html#credentials">Credentials</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="buy.html">Buy Full Site</a></li>
+    </ul>
+    <p class="footer-fine">&copy; 2026 My Arborist! · Denton, TX. This site was built by 940Digital.</p>
   </div>
 </footer>
 
@@ -170,8 +166,8 @@
   .d940-mark { font-weight: 800; font-size: 1.3rem; margin-bottom: .75rem; letter-spacing: -0.01em; }
   .d940-mark span { color: #3194E0; }
   .d940-body { font-size: .95rem; line-height: 1.55; color: #fff; margin: 0 0 .85rem; }
-  .d940-cta a { color: #5FAEEE; font-weight: 700; text-decoration: underline; }
   .d940-cta { font-size: .88rem; line-height: 1.5; color: #D4D8DE; margin: 0; }
+  .d940-cta a { color: #5FAEEE; font-weight: 700; text-decoration: underline; }
   .d940-tab { flex-shrink: 0; width: 38px; height: 64px; background: #3194E0; color: #fff; border: none; border-radius: 0 12px 12px 0; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 20px -6px rgba(0,0,0,.5); }
   .d940-tab:hover { background: #4AA3E8; }
   .d940-tab svg { width: 18px; height: 18px; transition: transform .35s cubic-bezier(.16,1,.3,1); }
